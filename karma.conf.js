@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/getstream-chat-angular-example'),
+      dir: require('path').join(__dirname, './coverage/chat-angular-example'),
       subdir: '.',
       reporters: [
         { type: 'html' },
