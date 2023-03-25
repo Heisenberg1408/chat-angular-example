@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "getstream-chat-52971": {
+      "hosting": {
+        "chat-angular-example": [
+          "getstream-chat-52971"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "getstream-chat-52971"
+  }
+}

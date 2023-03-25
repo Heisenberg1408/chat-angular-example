@@ -105,10 +105,13 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
+          "builder": "@angular/fire:deploy",
           "options": {
-            "baseHref": "https://heisenberg1408.github.io/chat-angular-example/",
-            "branch": "deploy"
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "chat-angular-example:build:production",
+            "firebaseProject": "getstream-chat-52971",
+            "firebaseHostingSite": "getstream-chat-52971"
           }
         }
       }

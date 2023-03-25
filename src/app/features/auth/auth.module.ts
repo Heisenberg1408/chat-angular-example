@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -23,7 +24,8 @@ declarations: [
     MatFormFieldModule,
     MatButtonModule,
     MatDividerModule,
-    RouterModule
+    RouterModule,
+    MatSnackBarModule
   ]
 })
 export class AuthModule { }
