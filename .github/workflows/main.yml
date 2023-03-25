@@ -25,4 +25,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist/chat-angular-example
