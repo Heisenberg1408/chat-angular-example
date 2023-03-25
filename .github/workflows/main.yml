@@ -17,12 +17,12 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build App
         run: npm run build:prod
-        
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          personal_token: ${{ secrets.TOKEN }}
-          publish_dir: ./dist/chat-angular-example
+          folder: ./dist/chat-angular-example
+          token: ${{ secrets.TOKEN }}
