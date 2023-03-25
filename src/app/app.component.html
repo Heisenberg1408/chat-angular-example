@@ -2,7 +2,8 @@
   <span>GetStream.io Chat</span>
   <span class="header-spacer"></span>
   <ng-container *ngIf="auth.isLoggedIn$ | async as user; else authButtons">
-    <span>User {{ user.displayName }} is logged in</span>
+    <span [style.margin-right]="'10px'">User {{ user.displayName }} is logged in</span>
+    <button mat-raised-button color="accent" (click)="signOut()">Sign out</button>
   </ng-container>
 </mat-toolbar>
 
@@ -11,6 +12,6 @@
 </main>
 
 <ng-template #authButtons>
-  <a routerLink="/signin" routerLinkActive="active" mat-button>Sign in</a>
+  <a routerLink="/signin" routerLinkActive="active" mat-button [style.margin-right]="'10px'">Sign in</a>
   <a routerLink="/signup" routerLinkActive="active" mat-button>Sign up</a>
 </ng-template>

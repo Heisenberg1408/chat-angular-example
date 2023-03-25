@@ -3,3 +3,5 @@ export interface SignupCredentials {
   displayName: string;
   password: string;
 }
+
+export interface SigninCredentials extends Omit<SignupCredentials, 'displayName'> {}
