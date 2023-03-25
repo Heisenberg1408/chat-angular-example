@@ -105,7 +105,11 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://heisenberg1408.github.io/chat-angular-example/",
+            "branch": "deploy"
+          }
         }
       }
     }

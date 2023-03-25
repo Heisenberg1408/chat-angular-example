@@ -18,12 +18,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build App
-        run: npm run build:prod
+      - name: Deploy App
+        run: npm run deploy
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
-        with:
-          folder: dist/chat-angular-example
-          branch: deploy
-          token: ${{ secrets.TOKEN }}
+      # - name: Deploy to GitHub Pages
+      #   uses: JamesIves/github-pages-deploy-action@v4.4.1
+      #   with:
+      #     folder: dist/chat-angular-example
+      #     branch: deploy
+      #     token: ${{ secrets.TOKEN }}
