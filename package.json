@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build:prod": "ng build",
+    "build:deploy": "ng build --configuration production --base-href https://heisenberg1408.github.io/chat-angular-example/",
     "deploy": "ng deploy",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
