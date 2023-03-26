@@ -28,7 +28,7 @@ export class SigninComponent implements OnInit {
 
   signIn() {
     this.auth.signIn(this.form.value as SigninCredentials).subscribe({
-      next: () => this._router.navigate(['chat'])
+      next: (u) => this._router.navigate(['chat'])
     });
   }
 }

@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
-  <span>GetStream.io Chat</span>
+  <span>Chat App</span>
   <span class="header-spacer"></span>
   <ng-container *ngIf="auth.isLoggedIn$ | async as user; else authButtons">
-    <span [style.margin-right]="'10px'">User {{ user.displayName }} is logged in</span>
+    <span [style.margin-right]="'10px'"><strong>{{ user.displayName }}</strong> is logged in</span>
     <button mat-raised-button color="accent" (click)="signOut()">Sign out</button>
   </ng-container>
 </mat-toolbar>

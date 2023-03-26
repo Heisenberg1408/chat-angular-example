@@ -7,5 +7,9 @@ export const environment = {
     authDomain: 'getstream-chat-52971.firebaseapp.com',
     messagingSenderId: '975187763274',
   },
-  production: true
+  production: true,
+  apiURL: 'https://us-central1-getstream-chat-52971.cloudfunctions.net',
+  streamApp: {
+    key: 'fem5uwbqx9p6'
+  }
 };
