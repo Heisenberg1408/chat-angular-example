@@ -1,14 +1,22 @@
 <div class="chat-container" *ngIf="chatIsReady$ | async; else unavailable">
-  <stream-channel-list></stream-channel-list>
+  <stream-channel-list>
+    <!-- <input channel-list-top placeholder="Search" /> -->
+    <button class="create-channel-btn" mat-fab color="primary" channel-list-bottom matTooltip="Start messaging">
+      <mat-icon fontIcon="chack"></mat-icon>
+      <!-- <span class="material-icons-outlined">
+        add
+        </span> -->
+    </button>
+  </stream-channel-list>
   <stream-channel>
     <stream-channel-header></stream-channel-header>
     <stream-message-list></stream-message-list>
     <stream-notification-list></stream-notification-list>
     <stream-message-input></stream-message-input>
-    <stream-thread name="thread">
+    <!-- <stream-thread name="thread">
       <stream-message-list mode="thread"></stream-message-list>
       <stream-message-input mode="thread"></stream-message-input>
-    </stream-thread>
+    </stream-thread> -->
   </stream-channel>
 </div>
 

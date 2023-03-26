@@ -1,3 +1,6 @@
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -16,7 +19,10 @@ import { StreamChatModule, StreamAutocompleteTextareaModule } from 'stream-chat-
     ChatRoutingModule,
     TranslateModule.forChild(),
     StreamChatModule,
-    StreamAutocompleteTextareaModule
+    StreamAutocompleteTextareaModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTooltipModule
   ]
 })
 export class ChatModule { }

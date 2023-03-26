@@ -1,6 +1,6 @@
 import { catchError, map, switchMap, of } from 'rxjs';
 import environment from '@chat/environment';
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import { ChatClientService, ChannelService, StreamI18nService } from 'stream-chat-angular';
 import { AuthService } from './../../auth/auth.service';
 import { Observable } from 'rxjs';
@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./chat-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ChatPageComponent implements OnInit {
+export class ChatPageComponent implements OnInit, OnDestroy {
 
   public chatIsReady$!: Observable<boolean>;
 
@@ -36,7 +36,13 @@ export class ChatPageComponent implements OnInit {
       })),
       map(() => true),
       catchError(() => of(false))
-    )
+    );
+    this._channelService.channels$.subscribe(channels => console.log(channels));
+  }
+
+  async ngOnDestroy() {
+    this._channelService.reset();
+    await this._chatService.disconnectUser();
   }
 
 }

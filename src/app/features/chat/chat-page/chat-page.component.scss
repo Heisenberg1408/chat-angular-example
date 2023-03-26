@@ -8,6 +8,12 @@
 
   stream-channel-list {
     width: 30%;
+    .create-channel-btn {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      z-index: 100;
+    }
   }
 
   stream-channel {
@@ -16,5 +22,11 @@
 
   stream-thread {
     width: 45%;
+  }
+
+  ::ng-deep {
+    .str-chat__channel-list-messenger__main {
+      position: relative;
+    }
   }
 }
