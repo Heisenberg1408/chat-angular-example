@@ -1,4 +1,4 @@
-export const environment = {
+const environment = {
   firebase: {
     projectId: 'getstream-chat-52971',
     appId: '1:975187763274:web:afc4a7c634e7beaafdc6b3',
@@ -13,3 +13,5 @@ export const environment = {
     key: 'fem5uwbqx9p6'
   }
 };
+
+export default environment;
