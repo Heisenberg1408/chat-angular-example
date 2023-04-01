@@ -25,6 +25,6 @@ jobs:
         if: success()
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          folder: dist/chat-angular-example
+          folder: dist/getstream-chat
           branch: deploy
           token: ${{ secrets.TOKEN }}

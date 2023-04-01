@@ -2,7 +2,7 @@
   "targets": {
     "getstream-chat-52971": {
       "hosting": {
-        "chat-angular-example": [
+        "getstream-chat": [
           "getstream-chat-52971"
         ]
       }

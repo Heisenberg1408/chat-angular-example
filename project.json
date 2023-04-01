@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/nx/schemas/project-schema.json",
-  "name": "chat-angular-example",
+  "name": "getstream-chat",
   "projectType": "application",
   "generators": {
     "@schematics/angular:component": {
@@ -16,7 +16,7 @@
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "options": {
-        "outputPath": "dist/chat-angular-example",
+        "outputPath": "dist/getstream-chat",
         "index": "src/index.html",
         "main": "src/main.ts",
         "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "chat-angular-example:build:production"
+          "browserTarget": "getstream-chat:build:production"
         },
         "development": {
-          "browserTarget": "chat-angular-example:build:development"
+          "browserTarget": "getstream-chat:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "chat-angular-example:build"
+        "browserTarget": "getstream-chat:build"
       }
     },
     "test": {
@@ -108,7 +108,7 @@
       "options": {
         "prerender": false,
         "ssr": false,
-        "browserTarget": "chat-angular-example:build:production",
+        "browserTarget": "getstream-chat:build:production",
         "firebaseProject": "getstream-chat-52971",
         "firebaseHostingSite": "getstream-chat-52971"
       }

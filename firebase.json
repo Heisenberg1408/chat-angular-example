@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "chat-angular-example",
-      "public": "dist/chat-angular-example",
+      "target": "getstream-chat",
+      "public": "dist/getstream-chat",
       "ignore": [
         "**/.*"
       ],
@@ -34,8 +34,8 @@
       ]
     },
     {
-      "target": "chat-angular-example",
-      "public": "dist/chat-angular-example",
+      "target": "getstream-chat",
+      "public": "dist/getstream-chat",
       "ignore": [
         "**/.*"
       ],

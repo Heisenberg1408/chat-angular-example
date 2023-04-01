@@ -1,13 +1,13 @@
 {
-  "name": "chat-angular-example",
+  "name": "getstream-chat",
   "version": "1.0.0",
   "scripts": {
-    "start": "nx exec -- nx serve chat-angular-example",
-    "build:prod": "nx exec -- nx build chat-angular-example",
-    "build:deploy": "nx build chat-angular-example --base-href https://heisenberg1408.github.io/chat-angular-example/",
-    "deploy": "nx deploy chat-angular-example",
-    "watch": "nx exec -- nx build chat-angular-example --watch --configuration development",
-    "test": "nx test chat-angular-example"
+    "start": "nx exec -- nx serve getstream-chat",
+    "build:prod": "nx exec -- nx build getstream-chat",
+    "build:deploy-github": "nx build getstream-chat --base-href https://heisenberg1408.github.io/getstream-chat/",
+    "build:deploy-firebase": "nx deploy getstream-chat",
+    "watch": "nx exec -- nx build getstream-chat --watch --configuration development",
+    "test": "nx test getstream-chat"
   },
   "private": true,
   "dependencies": {
