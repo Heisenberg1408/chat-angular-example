@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './features/auth/auth.module';
-import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { ChatModule } from './features/chat/chat.module';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
@@ -14,6 +13,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { TranslateModule } from '@ngx-translate/core';
 import environment from '@chat/environment';
+import { MenubarComponent } from './features/menubar/menubar.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +26,11 @@ import environment from '@chat/environment';
     HttpClientModule,
     TranslateModule.forRoot(),
     AuthModule,
-    MatToolbarModule,
     MatButtonModule,
     ChatModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    MenubarComponent
   ],
   providers: [
     {

@@ -1,0 +1,19 @@
+:host {
+  ::ng-deep {
+    .menubar {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: initial;
+    }
+
+    .active-btn .p-button, .active-btn .p-button:hover {
+      border: 1px solid white;
+    }
+  }
+}
+
+.logo-title {
+  font-size: 1.2rem;
+}
+
