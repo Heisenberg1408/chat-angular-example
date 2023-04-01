@@ -2,12 +2,12 @@
   "name": "chat-angular-example",
   "version": "1.0.0",
   "scripts": {
-    "start": "nx exec -- nx serve",
-    "build:prod": "nx exec -- nx build",
-    "build:deploy": "nx exec -- nx build --base-href https://heisenberg1408.github.io/chat-angular-example/",
-    "deploy": "nx deploy",
-    "watch": "nx exec -- nx build --watch --configuration development",
-    "test": "nx test"
+    "start": "nx exec -- nx serve chat-angular-example",
+    "build:prod": "nx exec -- nx build chat-angular-example",
+    "build:deploy": "nx build chat-angular-example --base-href https://heisenberg1408.github.io/chat-angular-example/",
+    "deploy": "nx deploy chat-angular-example",
+    "watch": "nx exec -- nx build chat-angular-example --watch --configuration development",
+    "test": "nx test chat-angular-example"
   },
   "private": true,
   "dependencies": {
