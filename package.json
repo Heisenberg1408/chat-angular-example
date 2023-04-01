@@ -4,7 +4,7 @@
   "scripts": {
     "start": "nx exec -- nx serve",
     "build:prod": "nx exec -- nx build",
-    "build:deploy": "nx exec -- nx build --configuration production --base-href https://heisenberg1408.github.io/chat-angular-example/",
+    "build:deploy": "nx exec -- nx build --base-href https://heisenberg1408.github.io/chat-angular-example/",
     "deploy": "nx deploy",
     "watch": "nx exec -- nx build --watch --configuration development",
     "test": "nx test"
