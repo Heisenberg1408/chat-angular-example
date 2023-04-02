@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { AuthorizationFormModule, FormFieldModule, SignupCredentials } from '@chat/shared';
@@ -20,6 +20,7 @@ import { ButtonModule } from 'primeng/button';
     ReactiveFormsModule,
     InputTextModule,
     ButtonModule,
+    MatSnackBarModule,
     FormFieldModule
   ],
   changeDetection: ChangeDetectionStrategy.OnPush

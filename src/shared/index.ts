@@ -5,3 +5,4 @@ export * from './components/authorization-form/authorization-form.module';
 export * from './components/authorization-form/authorization-form.component';
 
 export * from './models/auth.model';
+export * from './animations';

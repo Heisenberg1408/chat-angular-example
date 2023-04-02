@@ -1,11 +1,11 @@
 import { Router, RouterLink } from '@angular/router';
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { AuthService } from '../auth.service';
 import { ButtonModule } from 'primeng/button';
 import { NgIf } from '@angular/common';
-import { FormFieldModule, AuthorizationFormModule, SigninCredentials } from '@chat/shared';
+import { FormFieldModule, AuthorizationFormModule, SigninCredentials, fadeIn } from '@chat/shared';
 
 @Component({
   selector: 'app-signin',
@@ -21,7 +21,13 @@ import { FormFieldModule, AuthorizationFormModule, SigninCredentials } from '@ch
     InputTextModule,
     ButtonModule
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [
+    fadeIn
+  ],
+  host: {
+    '[@fadeIn]': ''
+  }
 })
 export class SigninComponent implements OnInit {
 
