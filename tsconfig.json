@@ -24,6 +24,9 @@
     "paths": {
       "@chat/environment": [
         "./src/environments/environment.ts"
+      ],
+      "@chat/shared": [
+        "./src/shared/index.ts"
       ]
     }
   },

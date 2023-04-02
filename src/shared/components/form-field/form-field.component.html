@@ -1,0 +1,12 @@
+<section class="form-field-wrapper">
+
+  <span class="p-float-label">
+    <ng-content select="[pInputText]"></ng-content>
+    <label for="{{inputField.nativeElement.id}}">{{label}}</label>
+  </span>
+
+  <span class="form-field-footer">
+    <ng-container *ngTemplateOutlet="footer.templateRef"></ng-container>
+  </span>
+
+</section>

@@ -1,14 +1,27 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
-import { SignupCredentials } from '../auth';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { AuthorizationFormModule, FormFieldModule, SignupCredentials } from '@chat/shared';
+import { NgIf } from '@angular/common';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss'],
+  standalone: true,
+  imports: [
+    NgIf,
+    RouterLink,
+    AuthorizationFormModule,
+    ReactiveFormsModule,
+    InputTextModule,
+    ButtonModule,
+    FormFieldModule
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SignupComponent implements OnInit {

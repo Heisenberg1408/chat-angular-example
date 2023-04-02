@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { switchMap, Observable, from, forkJoin, map } from 'rxjs';
 import { Auth, authState, createUserWithEmailAndPassword, updateProfile, User, signInWithEmailAndPassword } from '@angular/fire/auth';
-import { SigninCredentials, SignupCredentials } from './auth';
+import { SigninCredentials, SignupCredentials } from '@chat/shared';
 import { HttpClient } from '@angular/common/http';
 import environment from '@chat/environment';
 

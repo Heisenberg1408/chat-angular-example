@@ -1,13 +1,26 @@
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { SigninCredentials } from '../auth';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
 import { AuthService } from '../auth.service';
+import { ButtonModule } from 'primeng/button';
+import { NgIf } from '@angular/common';
+import { FormFieldModule, AuthorizationFormModule, SigninCredentials } from '@chat/shared';
 
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.scss'],
+  standalone: true,
+  imports: [
+    NgIf,
+    RouterLink,
+    ReactiveFormsModule,
+    AuthorizationFormModule,
+    FormFieldModule,
+    InputTextModule,
+    ButtonModule
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SigninComponent implements OnInit {

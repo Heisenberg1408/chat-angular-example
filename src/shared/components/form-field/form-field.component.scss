@@ -1,0 +1,18 @@
+.form-field {
+  &-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &-footer {
+    margin-top: 3px;
+    display: block;
+    height: 1rem;
+  }
+}
+
+:host::ng-deep {
+  input {
+    width: 100%;
+  }
+}
