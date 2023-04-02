@@ -1,5 +1,5 @@
 <!-- <app-menubar></app-menubar> -->
 
-<main class="content">
-  <router-outlet></router-outlet>
+<main class="content" [@authRouteAnimation]="getAnimationState(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
 </main>

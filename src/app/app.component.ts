@@ -1,23 +1,20 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from './features/auth/auth.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { authRouteAnimation } from '@chat/shared';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  animations: [
+    authRouteAnimation
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
 
-  constructor(
-    private readonly _router: Router,
-    public auth: AuthService
-  ) {}
-
-  public signOut() {
-    this.auth.signOut().subscribe({
-      next: () => this._router.navigate(['signin'])
-    });
+  public getAnimationState(outlet: RouterOutlet) {
+    const state = outlet.activatedRouteData['animationState'];
+    return state;
   }
 }
