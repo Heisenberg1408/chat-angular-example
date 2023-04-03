@@ -2,7 +2,7 @@ import { catchError, map, switchMap, of } from 'rxjs';
 import environment from '@chat/environment';
 import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import { ChatClientService, ChannelService, StreamI18nService } from 'stream-chat-angular';
-import { AuthService } from './../../auth/auth.service';
+import { AuthService } from '@chat/shared';
 import { Observable } from 'rxjs';
 
 @Component({

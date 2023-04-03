@@ -12,8 +12,6 @@ const routes: Routes = [
     loadChildren: () => import('./features/chat/chat.module').then(m => m.ChatModule) },
 ];
 
-console.log(routes);
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -2,10 +2,9 @@ import { Router, RouterLink } from '@angular/router';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
-import { AuthService } from '../auth.service';
 import { ButtonModule } from 'primeng/button';
 import { NgIf } from '@angular/common';
-import { FormFieldModule, AuthorizationFormModule, SigninCredentials } from '@chat/shared';
+import { FormFieldModule, AuthorizationFormModule, SigninCredentials, AuthService } from '@chat/shared';
 
 @Component({
   selector: 'app-signin',
