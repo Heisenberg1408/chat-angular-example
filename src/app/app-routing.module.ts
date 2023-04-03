@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'signup', loadComponent: () => import('./features/auth/signup/signup.component').then((c) => c.SignupComponent),
     resolve: { animationState: () => 'signUpPage' } },
   { path: 'chat', ...canActivate(() => redirectUnauthorizedTo('signin')),
-    loadChildren: () => import('./features/chat/chat.module').then(m => m.ChatModule) },
+    loadComponent: () => import('./features/chat/chat-page/chat-page.component').then(c => c.ChatPageComponent),
+    resolve: { animationState: () => 'chatPage' } },
 ];
 
 @NgModule({

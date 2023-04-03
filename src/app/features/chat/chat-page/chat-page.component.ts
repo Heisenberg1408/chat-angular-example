@@ -1,14 +1,31 @@
 import { catchError, map, switchMap, of } from 'rxjs';
 import environment from '@chat/environment';
 import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
-import { ChatClientService, ChannelService, StreamI18nService } from 'stream-chat-angular';
-import { AuthService } from '@chat/shared';
+import { ChatClientService, ChannelService, StreamI18nService, StreamChatModule, StreamAutocompleteTextareaModule } from 'stream-chat-angular';
+import { AuthService, fadeInOut } from '@chat/shared';
 import { Observable } from 'rxjs';
+import { ButtonModule } from 'primeng/button';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { MenubarComponent } from '../../menubar/menubar.component';
 
 @Component({
   selector: 'app-chat-page',
   templateUrl: './chat-page.component.html',
   styleUrls: ['./chat-page.component.scss'],
+  standalone: true,
+  imports: [
+    NgIf,
+    AsyncPipe,
+    StreamChatModule,
+    StreamAutocompleteTextareaModule,
+    ButtonModule,
+    ProgressSpinnerModule,
+    MenubarComponent
+  ],
+  animations: [
+    fadeInOut
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChatPageComponent implements OnInit, OnDestroy {

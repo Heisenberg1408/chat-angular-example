@@ -1,12 +1,8 @@
-<div class="chat-container" *ngIf="chatIsReady$ | async; else unavailable">
+<app-menubar></app-menubar>
+
+<div [@fadeInOut] class="chat-container" *ngIf="chatIsReady$ | async; else unavailable">
   <stream-channel-list>
-    <!-- <input channel-list-top placeholder="Search" /> -->
-    <button class="create-channel-btn" mat-fab color="primary" channel-list-bottom matTooltip="Start messaging">
-      <i class="pi pi-plus" [style.font-size]="'1.3rem'"></i>
-      <!-- <span class="material-icons-outlined">
-        add
-        </span> -->
-    </button>
+    <p-button class="create-channel-btn" channel-list-bottom icon="pi pi-plus" styleClass="p-button-rounded p-button-lg"></p-button>
   </stream-channel-list>
   <stream-channel>
     <stream-channel-header></stream-channel-header>
@@ -21,7 +17,7 @@
 </div>
 
 <ng-template #unavailable>
-  <div>
-    Chat is not available.
+  <div class="spinner-container">
+    <p-progressSpinner [@fadeInOut] strokeWidth="4"></p-progressSpinner>
   </div>
 </ng-template>

@@ -8,7 +8,7 @@
         </ng-template>
       </app-form-field>
       <app-form-field label="Password">
-        <input pInputText id="password" class="form-input" formControlName="password" aria-describedby="password-error"/>
+        <input pInputText id="password" type="password" class="form-input" formControlName="password" aria-describedby="password-error"/>
         <ng-template formFieldFooter>
           <small *ngIf="form.controls['password'].hasError('minlength')" id="password-error" class="error-message">Password is too short</small>
         </ng-template>

@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from '@chat/shared';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({

@@ -1,6 +1,7 @@
 .content {
   height: 100vh;
-  padding: 25px 15px;
+  padding: 0;
   box-sizing: border-box;
   background: linear-gradient(var(--primary-color), #e66465);
+  position: relative;
 }
