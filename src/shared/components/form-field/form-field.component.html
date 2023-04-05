@@ -5,7 +5,7 @@
     <label for="{{inputField.nativeElement.id}}">{{label}}</label>
   </span>
 
-  <span class="form-field-footer">
+  <span *ngIf="footer" class="form-field-footer">
     <ng-container *ngTemplateOutlet="footer.templateRef"></ng-container>
   </span>
 

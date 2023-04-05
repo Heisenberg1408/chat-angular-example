@@ -1,6 +1,6 @@
 import { AfterContentInit, ChangeDetectionStrategy, Component,
   ContentChild, Directive, ElementRef, Input, TemplateRef } from '@angular/core';
-import { NgTemplateOutlet } from '@angular/common';
+import { NgIf, NgTemplateOutlet } from '@angular/common';
 import { InputText } from 'primeng/inputtext';
 
 @Directive({
@@ -18,6 +18,7 @@ export class FormFieldFooterDirective {
   selector: 'app-form-field',
   standalone: true,
   imports: [
+    NgIf,
     NgTemplateOutlet
   ],
   templateUrl: './form-field.component.html',

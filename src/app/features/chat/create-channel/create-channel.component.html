@@ -1,0 +1,6 @@
+<div class="create-channel-wrapper">
+  <app-form-field label="Channel name">
+    <input pInputText id="channelName" [formControl]="newChannelCtrl"/>
+  </app-form-field>
+  <p-button (onClick)="createChannel()">Create</p-button>
+</div>

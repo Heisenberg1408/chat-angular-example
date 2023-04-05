@@ -8,14 +8,8 @@
   flex: 1;
   // height: 100%;
 
-  stream-channel-list {
+  app-channel-list {
     width: 30%;
-    .create-channel-btn {
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      z-index: 100;
-    }
   }
 
   stream-channel {

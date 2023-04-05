@@ -4,10 +4,12 @@ import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/
 import { ChatClientService, ChannelService, StreamI18nService, StreamChatModule, StreamAutocompleteTextareaModule } from 'stream-chat-angular';
 import { AuthService, fadeInOut } from '@chat/shared';
 import { Observable } from 'rxjs';
-import { ButtonModule } from 'primeng/button';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { MenubarComponent } from '../../menubar/menubar.component';
+import { TooltipModule } from 'primeng/tooltip';
+import { ChannelListComponent } from '../channel-list/channel-list.component';
 
 @Component({
   selector: 'app-chat-page',
@@ -17,14 +19,19 @@ import { MenubarComponent } from '../../menubar/menubar.component';
   imports: [
     NgIf,
     AsyncPipe,
+    DynamicDialogModule,
     StreamChatModule,
     StreamAutocompleteTextareaModule,
-    ButtonModule,
     ProgressSpinnerModule,
-    MenubarComponent
+    TooltipModule,
+    MenubarComponent,
+    ChannelListComponent
   ],
   animations: [
     fadeInOut
+  ],
+  providers: [
+    DialogService
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -54,7 +61,6 @@ export class ChatPageComponent implements OnInit, OnDestroy {
       map(() => true),
       catchError(() => of(false))
     );
-    this._channelService.channels$.subscribe(channels => console.log(channels));
   }
 
   async ngOnDestroy() {
