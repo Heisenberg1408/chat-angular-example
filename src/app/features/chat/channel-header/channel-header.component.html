@@ -1,0 +1,10 @@
+<stream-channel-header></stream-channel-header>
+
+<ng-template #channelActionsTemplate let-channel="channel">
+  <p-button
+    icon="pi pi-user-plus"
+    styleClass="p-button-rounded p-button-text p-button-sm"
+    pTooltip="Invite users"
+    tooltipPosition="top"
+    (onClick)="openInviteUsersModal(channel)"></p-button>
+</ng-template>

@@ -1,0 +1,6 @@
+
+<span class="p-fluid">
+  <p-autoComplete [formControl]="selectedUsers" [suggestions]="searchUserList"
+      (completeMethod)="searchUsers($event)" field="name" [multiple]="true"></p-autoComplete>
+</span>
+<p-button (onClick)="closeModal()" [disabled]="!selectedUsers.value?.length">Invite</p-button>

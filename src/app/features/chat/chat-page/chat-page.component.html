@@ -3,7 +3,7 @@
 <div [@fadeInOut] class="chat-container" *ngIf="chatIsReady$ | async; else unavailable">
   <app-channel-list></app-channel-list>
   <stream-channel>
-    <stream-channel-header></stream-channel-header>
+    <app-channel-header></app-channel-header>
     <stream-message-list></stream-message-list>
     <stream-notification-list></stream-notification-list>
     <stream-message-input></stream-message-input>
@@ -19,3 +19,4 @@
     <p-progressSpinner [@fadeInOut] strokeWidth="4"></p-progressSpinner>
   </div>
 </ng-template>
+

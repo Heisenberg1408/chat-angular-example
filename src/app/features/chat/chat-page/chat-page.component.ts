@@ -1,7 +1,8 @@
 import { catchError, map, switchMap, of } from 'rxjs';
 import environment from '@chat/environment';
 import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
-import { ChatClientService, ChannelService, StreamI18nService, StreamChatModule, StreamAutocompleteTextareaModule } from 'stream-chat-angular';
+import { ChatClientService, ChannelService, StreamI18nService, StreamChatModule,
+  StreamAutocompleteTextareaModule } from 'stream-chat-angular';
 import { AuthService, fadeInOut } from '@chat/shared';
 import { Observable } from 'rxjs';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
@@ -10,6 +11,8 @@ import { AsyncPipe, NgIf } from '@angular/common';
 import { MenubarComponent } from '../../menubar/menubar.component';
 import { TooltipModule } from 'primeng/tooltip';
 import { ChannelListComponent } from '../channel-list/channel-list.component';
+import { ButtonModule } from 'primeng/button';
+import { ChannelHeaderComponent } from '../channel-header/channel-header.component';
 
 @Component({
   selector: 'app-chat-page',
@@ -23,9 +26,11 @@ import { ChannelListComponent } from '../channel-list/channel-list.component';
     StreamChatModule,
     StreamAutocompleteTextareaModule,
     ProgressSpinnerModule,
+    ButtonModule,
     TooltipModule,
     MenubarComponent,
-    ChannelListComponent
+    ChannelListComponent,
+    ChannelHeaderComponent
   ],
   animations: [
     fadeInOut
